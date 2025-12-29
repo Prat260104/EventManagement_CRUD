@@ -11,13 +11,12 @@ mvn spring-boot:run
 
 ## Project Structure Explained
 
-```
-TeacherManagement
+TeacherCrud
 ├── pom.xml                     <-- Maven configuration (Dependencies like Spring Web, H2, JSP)
 ├── src
 │   ├── main
 │   │   ├── java
-│   │   │   └── com.example.eventmanagement
+│   │   │   └── com.example.teachermanagement
 │   │   │       ├── TeacherApplication.java          <-- Main entry point (Starts the App)
 │   │   │       ├── model
 │   │   │       │   └── Teacher.java                 <-- Database Table Structure (Entity)
@@ -62,22 +61,3 @@ Currently, the project uses an **H2 In-Memory Database**.
 - **What happens when I stop the app?**: All teacher data will be **DELETED**.
 - **Why?**: For simplicity and ease of setup without needing an external database installation like MySQL.
 
-## 🧠 Concepts & Why We Used Them
-
-### 1. What is H2 Database?
-- **What**: It is a super-lightweight database written in Java that runs inside your application's memory.
-- **Why**: We used it because you don't need to install anything. It just works when you click run. Great for testing and simple projects.
-
-### 2. What is JPA Repository?
-- **What**: `JpaRepository` is a magic interface from Spring Data.
-- **Why**: Normally, to save data, you write SQL: `INSERT INTO teachers...`. With JPA Repository, you just write `teacherRepository.save(teacher)`. It writes the SQL for you automatically.
-
-### 3. What is Model / Entity?
-- **What**: The `Teacher.java` class.
-- **Why**: It maps your Java code to the Database table.
-    - Class `Teacher` -> Table `TEACHER`
-    - Field `name` -> Column `NAME`
-- **Annotations**: `@Entity` tells Hibernate "This class is a database table". `@Id` tells it "This is the Primary Key".
-
-### 4. Controller
-- **Role**: Handles incoming HTTP requests and decides what to do (e.g., fetch data, save data, show a page).
