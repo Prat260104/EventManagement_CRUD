@@ -1,4 +1,4 @@
-package com.example.eventmanagement;
+package com.example.teachermanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

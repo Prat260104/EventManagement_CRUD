@@ -1,7 +1,8 @@
-package com.example.eventmanagement.repository;
+package com.example.teachermanagement.repository;
 
-import com.example.eventmanagement.model.Teacher;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.teachermanagement.model.Teacher;
 
 public interface TeacherRepository extends JpaRepository<Teacher, Long> {
 }

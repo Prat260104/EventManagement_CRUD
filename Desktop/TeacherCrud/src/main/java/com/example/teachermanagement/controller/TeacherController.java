@@ -1,11 +1,12 @@
-package com.example.eventmanagement.controller;
+package com.example.teachermanagement.controller;
 
-import com.example.eventmanagement.model.Teacher;
-import com.example.eventmanagement.repository.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import com.example.teachermanagement.model.Teacher;
+import com.example.teachermanagement.repository.TeacherRepository;
 
 @Controller
 @RequestMapping("/teachers")

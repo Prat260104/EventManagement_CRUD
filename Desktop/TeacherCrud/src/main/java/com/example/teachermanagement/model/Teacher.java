@@ -1,4 +1,4 @@
-package com.example.eventmanagement.model;
+package com.example.teachermanagement.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
